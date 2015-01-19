@@ -6,7 +6,7 @@
   Template.main.rendered = function() {
     var query;
     query = location.search && location.search.split('?q=')[1];
-    if (!query) {
+    if (query) {
       $('input').val(decodeURIComponent(query));
       return $('form').submit();
     }
